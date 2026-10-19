@@ -1,0 +1,21 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    },
+    {
+      "path": "./tsconfig.app.json"
+    }
+  ],
+  // Keep the alias here for shadcn-vue CLI detection; tsconfig.app.json
+  // defines the matching alias for application type-checking.
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    // Silence the TypeScript 6 warning while baseUrl is required for shadcn-vue alias detection.
+    "ignoreDeprecations": "6.0"
+  }
+}
