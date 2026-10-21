@@ -41,6 +41,6 @@ nav {
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 </style>
