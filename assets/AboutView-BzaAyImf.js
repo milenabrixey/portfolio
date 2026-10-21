@@ -1,1 +1,0 @@
-import{a as e,i as t,n,r,t as i}from"./index-DlvbAeNR.js";var a=t({__name:`AboutView`,setup(t){return(t,a)=>(e(),n(`main`,null,[r(i,{msg:`About`})]))}});export{a as default};
