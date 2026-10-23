@@ -251,7 +251,7 @@ watch(
 <template>
   <span
     ref="rootRef"
-    class="inline-block leading-[0.95] tracking-[-0.04em] whitespace-pre-wrap select-text fold-text"
+    class="inline-block leading-[0.85] pb-[0.3em] tracking-[-0.04em] whitespace-pre-wrap select-text fold-text"
     :style="rootStyle"
   >
     <span class="sr-only">{{ text }}</span>
