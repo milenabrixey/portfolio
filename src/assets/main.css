@@ -40,6 +40,36 @@ a,
   }
 }
 
+@utility gradient-text {
+  background: linear-gradient(
+    90deg,
+    var(--custom-color-primary),
+    var(--custom-color-secondary),
+    var(--custom-color-secondary),
+    var(--custom-color-primary)
+  );
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-text-shift 6s linear infinite, var(--animate-glow);
+}
+
+@keyframes gradient-text-shift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* @media (prefers-reduced-motion: reduce) {
+  .gradient-text {
+    animation: none;
+  }
+} */
+
 @theme inline {
   --font-heading: var(--font-sans);
   --color-sidebar-ring: var(--sidebar-ring);
@@ -77,6 +107,20 @@ a,
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --animate-glow: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow:
+      0 0 3px color-mix(in srgb, var(--custom-color-secondary) 30%, transparent),
+      0 0 6px color-mix(in srgb, var(--custom-color-secondary) 20%, transparent);
+  }
+  100% {
+    text-shadow:
+      0 0 5px color-mix(in srgb, var(--custom-color-secondary) 35%, transparent),
+      0 0 12px color-mix(in srgb, var(--custom-color-secondary) 25%, transparent);
+  }
 }
 
 :root {
